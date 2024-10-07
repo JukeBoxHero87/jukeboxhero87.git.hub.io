@@ -1,0 +1,15 @@
+```mermaid
+sequenceDiagram
+    participant Attacker
+    participant BotNet
+    participant WebServer
+    participant Firewall
+
+    Attacker->>Bots: Send attack command
+    Bots->>Server: Flood with requests
+    Server->>Defense: Alert high traffic volume
+    Defense->>Server: Implement rate limiting
+    Server-->>Bots: Respond with error messages
+    Defense->>Server: Block suspicious IPs
+    Note right of Defense: Continuing mitigation
+
